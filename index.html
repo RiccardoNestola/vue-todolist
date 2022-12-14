@@ -33,8 +33,8 @@
             
                 <li class="list-group-item d-flex justify-content-between" v-for="element in todoList">
                     <input class="form-check-input me-2" type="checkbox" value="" id="firstCheckbox" v-model="element.done"/>
-                    <label class="form-check-label" for="firstCheckbox">{{element.text}}</label>
-                    <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                    <label class="form-check-label d-flex flex-grow-1" for="firstCheckbox">{{element.text}}</label>
+                    <button type="button" class="btn btn-sm btn-outline-danger" @click="removeTodo(element)"><i class="fa-solid fa-trash fa-sm"></i></button>
 
         
         </ul>

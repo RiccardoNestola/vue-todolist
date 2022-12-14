@@ -30,24 +30,12 @@ const { createApp } = Vue
                     text:"andare al cinema",
                     done: false
                 },
-                {
-                    text:"pagare le tasse",
-                    done: true
-                },
-                {
-                    text:"pagare le tasse",
-                    done: true
-                },
-                {
-                    text:"pagare le tasse",
-                    done: true
-                },
             ],
         }
     },
         methods: {
             addNewTodoElement(content) {
-                
+                content = content.toLowerCase();
                 if (content != "" && (!this.todoList.includes(content))) {
                     this.todoList.push({text : content, done : false});
                     this.clearUserInput();
@@ -58,6 +46,13 @@ const { createApp } = Vue
 
             clearUserInput() {
                 this.newTodoElement = "";
+            },
+
+            removeTodo (itemToRemove) {
+                itemIndex = this.todoList.indexOf(itemToRemove);
+                if (itemIndex > - 1) {
+                this.todoList.splice (itemIndex, 1)
+                }
             }
         }
 
