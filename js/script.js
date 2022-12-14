@@ -34,8 +34,23 @@ const { createApp } = Vue
                     text:"pagare le tasse",
                     done: true
                 },
+                {
+                    text:"pagare le tasse",
+                    done: true
+                },
+                {
+                    text:"pagare le tasse",
+                    done: true
+                },
             ],
         }
+    },
+        methods: {
+            addNewTodoElement(content) {
+                this.todoList.push({text : content, done : false});
+                this.newTodoElement = "";
+            }
         }
+
     }).mount('#app')
 
