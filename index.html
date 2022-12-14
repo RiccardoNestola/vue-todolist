@@ -29,9 +29,9 @@
     </div>
 
         <ul class="list-group">
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" v-model="todoList[activeIndex].done" />
-            <label class="form-check-label" for="firstCheckbox"> {{todoList[activeIndex].text}} </label>
+            <li class="list-group-item"v-for="element in todoList">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" v-model="element.done" />
+            <label class="form-check-label" for="firstCheckbox"> {{element.text}} </label>
             </li>
         </ul>
 

@@ -3,7 +3,7 @@ const { createApp } = Vue
     createApp({
         data() {
         return {
-            activeIndex : 0,
+            newTodoElement: "",
             todoList: [
 
                 {
@@ -28,7 +28,7 @@ const { createApp } = Vue
                 },
                 {
                     text:"andare al cinema",
-                    done: true
+                    done: false
                 },
                 {
                     text:"pagare le tasse",
