@@ -24,7 +24,7 @@
 
 <div class="container">
     <div class="input-group py-4 mb-3">
-        <input type="text" class="form-control" placeholder="Inserisci qualcosa..." v-model="newTodoElement">
+        <input type="text" class="form-control" placeholder="Inserisci qualcosa..." v-model.trim="newTodoElement" @keyup.enter="addNewTodoElement(newTodoElement)">
         <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addNewTodoElement(newTodoElement)">+</button>
     </div>
 
