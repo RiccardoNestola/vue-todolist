@@ -47,8 +47,12 @@ const { createApp } = Vue
     },
         methods: {
             addNewTodoElement(content) {
-                this.todoList.push({text : content, done : false});
-                this.clearUserInput();
+                
+                if (content != "" && (!this.todoList.includes(content))) {
+                    this.todoList.push({text : content, done : false});
+                    this.clearUserInput();
+                    }
+                
                 
             },
 
